@@ -57,7 +57,7 @@ log() {
 }
 
 mpc_status() {
-    $MPC status 2>/dev/null | grep -B1 '^\[playing\]' | tr '\n' ' '
+    $MPC status 2>/dev/null | grep -B1 '^\[playing\]\|^ERROR' | tr '\n' ' '
 }
 
 while getopts "h::i:p:sv" opt; do
