@@ -6,3 +6,9 @@ it appears to hang.  This can be especially useful when playing
 internet streams.
 
 Originally based on [http://mpd.wikia.com/wiki/Hack:stream-monitor].
+
+To install:
+sudo install -m 755 mpd-watchdog /usr/bin
+sudo install -m 755 -T debian/mpd-watchdog.init /etc/init.d/mpd-watchdog
+sudo install -m 755 -T debian/mpd-watchdog.default /etc/default/mpd-watchdog
+sudo update-rc.d mpd-watchdog defaults
